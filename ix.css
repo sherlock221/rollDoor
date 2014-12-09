@@ -1,0 +1,118 @@
+*{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+
+.wrap{
+
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.ib{ display: inline-block;}
+.f2{
+    width: 100%;
+    height: 50%;
+}
+
+.wrap .bg{
+    width: inherit;
+    height: inherit;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 9;
+
+    background: url("bg-04.jpg");
+    background-size: cover;
+}
+
+.wrap .top{
+    width: inherit;
+    height: inherit;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+}
+
+
+/** 动画 **/
+
+.wrap .top .first{
+    -webkit-animation : rolldoor 1s  ease 1s 1 both;
+    animation : rolldoor 1s  ease 1s 1 both;
+}
+
+.wrap .top .second{
+    -webkit-animation : rolldoor-inverse 1s  ease 1s 1 both;
+    animation : rolldoor-inverse 1s  ease 1s 1 both;
+}
+
+
+@-webkit-keyframes  rolldoor{
+        0%{
+            transform : translateY(0);
+            -webkit-transform : translateY(0);
+        }
+
+
+        100%{
+            transform : translateY(-100%);
+            -webkit-transform : translateY(-100%);
+        }
+}
+
+@keyframes  rolldoor{
+    0%{
+        transform : translateY(0);
+        -webkit-transform : translateY(0);
+        -moz-transform : translateY(0);
+    }
+
+
+    100%{
+        transform : translateY(-100%);
+        -webkit-transform : translateY(-100%);
+        -moz-transform : translateY(-100%);
+    }
+}
+
+
+@-webkit-keyframes  rolldoor-inverse{
+    0%{
+        transform : translateY(0);
+        -webkit-transform : translateY(0);
+    }
+
+
+    100%{
+        transform : translateY(100%);
+        -webkit-transform : translateY(100%);
+    }
+}
+
+
+@keyframes  rolldoor-inverse{
+    0%{
+        transform : translateY(0);
+        -webkit-transform : translateY(0);
+        -moz-transform : translateY(0);
+    }
+
+
+    100%{
+        transform : translateY(100%);
+        -webkit-transform : translateY(100%);
+        -moz-transform : translateY(100%);
+    }
+}
